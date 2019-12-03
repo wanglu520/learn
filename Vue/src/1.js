@@ -44,11 +44,13 @@ let app5 = new Vue({
     }
   }
 });
+let data = {
+  message:"学习 Vue"
+}
+// Object.freeze(data);
 let app6= new Vue({
   el:"#app-6",
-  data:{
-    message:"学习 Vue"
-  }
+  data:data
 });
 let app7 = new Vue({
   el:"#app-7",

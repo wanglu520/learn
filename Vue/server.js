@@ -3,10 +3,10 @@ let url  = require("url"),
     http=require("http"),
     path = require("path");
 http.createServer(function (req, res) {
-	console.log(url);
-	console.log(fs);
-	console.log(http);
-	console.log(path);
+	// console.log(url);
+	// console.log(fs);
+	// console.log(http);
+	// console.log(path);
      var pathname=__dirname+url.parse(req.url).pathname;
     if (path.extname(pathname)=="") {
         pathname+="/";
