@@ -10,3 +10,9 @@ let example2 = new Vue({
         message:""
     }
 })
+let example = new Vue({
+    el:"#example3",
+    data:{
+        checked:true
+    }
+})
