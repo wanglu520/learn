@@ -62,3 +62,17 @@ let app7 = new Vue({
     ]
   }
 })
+let example1 = new Vue({
+  el:"#example1",
+  data:{
+    count:0
+  }
+})
+let example2 = new Vue({
+  el:"#example2",
+  methods:{
+    say:function(message){
+      alert(message);
+    }
+  }
+});

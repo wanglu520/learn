@@ -9,6 +9,9 @@
 		<div>
 			<a href="./src/module/ComputedPropertiesAndWatchers.html" target="_blank">计算属性和侦听器</a>
 		</div>
+		<div>
+			<a href="./src/module/FormInputBindings.html" target="_blank">表单输入绑定</a>
+		</div>
 		<div id="app">
 			{{ message }}
 		</div>
@@ -45,7 +48,15 @@
 				></todo-item>
 			</ol>
 		</div>
-
+		<!--v-on-->
+		<div id="example1">
+			<button v-on:click="count += 1">add1</button>
+			<p>The button above has been clicked {{ count }} times.</p>
+		</div>
+		<div id="example2">
+			<button v-on:click="say('hi')">Say Hi</button>
+			<button v-on:click="say('喵')">Say 喵</button>
+		</div>
 
 		<script src="src/1.js"></script>
 	</body>

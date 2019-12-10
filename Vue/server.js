@@ -1,7 +1,8 @@
 let url  = require("url"),
     fs=require("fs"),
     http=require("http"),
-    path = require("path");
+    path = require("path"),
+    cp = require('child_process');
 http.createServer(function (req, res) {
 	// console.log(url);
 	// console.log(fs);
@@ -16,7 +17,6 @@ http.createServer(function (req, res) {
     }
  
     fs.exists(pathname,function(exists){
-		console.log(exists);
         if(exists){
             switch(path.extname(pathname)){
                 case ".html":
@@ -50,7 +50,8 @@ http.createServer(function (req, res) {
         }
     });
 
-}).listen(8888);
-
-// 终端打印如下信息
-console.log('Server running at http://127.0.0.1:8888/');
+}).listen(8888, function(){
+    // 终端打印如下信息
+    console.log('Server running at http://127.0.0.1:8888/');
+});
+cp.exec('start http://127.0.0.1:8888/1.html');
