@@ -8,7 +8,7 @@
     <body>
         <!--文本-->
         <div id="example1">
-            <input v-model="message" placeholder="edit me">
+            <input  v-model.number="message" placeholder="edit me">
             <p>Message is:{{message}}</p>
         </div>
         <!--多行文本-->
@@ -23,7 +23,31 @@
             <input type="checkbox" id="checkbox" v-model="checked">
             <label for="checkbox">{{checked}}</label>
         </div>
-        <!---->
+        <!--Components Basics-->
+        <div id="blog-posts-events-demo">
+            <button-counter></button-counter>
+            <div :style="{ fontSize: postFontSize + 'em' }">
+                <blog-post
+                v-for="post in posts"
+                v-bind:key="post.id"
+                v-bind:post="post"
+                v-on:enlarge-text="onEnlargeText"
+                ></blog-post>
+            </div>
+        </div>
+        <div id="example5">
+            <alert-box>
+                Something bad happened.
+            </alert-box>
+        </div>
+        <div id="example6">
+            <base-input
+            v-model="username"
+            v-bind:label="label"
+            required
+            placeholder="Enter your username"
+            ></base-input>
+        </div>
         <script src="../js/FormInputBindings.js"></script>
     </body>
 </html>
